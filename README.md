@@ -21,6 +21,8 @@ _General purpose handlers and integrations._
 - [slog-multi](https://github.com/samber/slog-multi): Chaining handlers (pipe, router, fanout, etc).
 - [slog-sampling](https://github.com/samber/slog-sampling): Drop repetitive log entries.
 
+**[⬆ back to top](#contents)**
+
 ## Formatting
 
 _Record and output formatters._
@@ -29,6 +31,8 @@ _Record and output formatters._
 - [slog-formatter](https://github.com/samber/slog-formatter): Common formatters for slog + helpers for building your own.
 - [tint](https://github.com/lmittmann/tint): Handler that writes tinted logs.
 
+**[⬆ back to top](#contents)**
+
 ## Enrichment
 
 _Handlers enriching log records._
@@ -36,6 +40,8 @@ _Handlers enriching log records._
 - [masq](https://github.com/m-mizutani/masq): Redact sensitive data in logs.
 - [otelslog](https://github.com/go-slog/otelslog): Handler attaching OpenTelemetry trace and resource details to logs.
 - [slog-context](https://github.com/PumpkinSeed/slog-context): Attach arbitrary key-value pairs to log records through context.
+
+**[⬆ back to top](#contents)**
 
 ## Log forwarding
 
@@ -57,12 +63,16 @@ _Handlers forwarding logs._
 - [slog-telegram](https://github.com/samber/slog-telegram): Handler forwarding logs to Telegram.
 - [slog-webhook](https://github.com/samber/slog-webhook): Handler forwarding logs to a Webhook.
 
+**[⬆ back to top](#contents)**
+
 ## Adapters
 
 _Adapters for other logging libraries._
 
 - [go-hclog-slog](https://github.com/evanphx/go-hclog-slog): Handler adapter for hclog.
 - [zaphandler](https://github.com/chanchal1987/zaphandler): Handler adapter for Zap.
+
+**[⬆ back to top](#contents)**
 
 ## Integrations
 
@@ -72,6 +82,8 @@ _`log/slog` integrations into third-party components._
 - [slog-fiber](https://github.com/samber/slog-fiber): Fiber middleware.
 - [slog-gin](https://github.com/samber/slog-gin): Gin middleware.
 
+**[⬆ back to top](#contents)**
+
 ## Resources
 
 _Other resources about `log/slog`._
@@ -80,9 +92,13 @@ _Other resources about `log/slog`._
 - [Introductory blog post](https://go.dev/blog/slog)
 - [Golang Wiki page](https://github.com/golang/go/wiki/Resources-for-slog)
 
+**[⬆ back to top](#contents)**
+
 ### Blog posts
 
 _Blog posts about `log/slog`_.
+
+**[⬆ back to top](#contents)**
 
 ### Creating slog
 
@@ -91,3 +107,5 @@ _Resources documenting the creation of `log/slog`_.
 - [Original design proposal](https://go.googlesource.com/proposal/+/master/design/56345-structured-logging.md)
 - [Initial discussion](https://github.com/golang/go/discussions/54763)
 - [Proposal issue](https://github.com/golang/go/issues/56345)
+
+**[⬆ back to top](#contents)**
