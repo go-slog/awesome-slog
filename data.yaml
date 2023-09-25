@@ -1,0 +1,165 @@
+categories:
+  - name: General
+    description: General purpose handlers and integrations.
+    items:
+      - name: slog-multi
+        link: https://github.com/samber/slog-multi
+        description: Chaining handlers (pipe, router, fanout, etc).
+
+      - name: slog-sampling
+        link: https://github.com/samber/slog-sampling
+        description: Drop repetitive log entries.
+
+  - name: Formatting
+    description: Record and output formatters.
+    items:
+      - name: devslog
+        link: https://github.com/golang-cz/devslog
+        description: Format logs for development.
+
+      - name: slog-formatter
+        link: https://github.com/samber/slog-formatter
+        description: Common formatters for slog + helpers for building your own.
+
+      - name: tint
+        link: https://github.com/lmittmann/tint
+        description: Handler that writes tinted logs.
+
+  - name: Enrichment
+    description: Handlers enriching log records.
+    items:
+      - name: masq
+        link: https://github.com/m-mizutani/masq
+        description: Redact sensitive data in logs.
+
+      - name: otelslog
+        link: https://github.com/go-slog/otelslog
+        description: Handler attaching OpenTelemetry trace and resource details to logs.
+
+      - name: slog-context
+        link: https://github.com/PumpkinSeed/slog-context
+        description: Attach arbitrary key-value pairs to log records through context.
+
+  - name: Log forwarding
+    description: Handlers forwarding logs.
+    items:
+      - name: slog-datadog
+        link: https://github.com/samber/slog-datadog
+        description: Handler forwarding logs to Datadog.
+
+      - name: slogdriver
+        link: https://github.com/jussi-kalliokoski/slogdriver
+        description: Handler forwarding logs to Stackdriver / GCP Cloud Logging.
+
+      - name: slog-fluentd
+        link: https://github.com/samber/slog-fluentd
+        description: Handler forwarding logs to FluentD.
+
+      - name: slog-graylog
+        link: https://github.com/samber/slog-graylog
+        description: Handler forwarding logs to Graylog.
+
+      - name: slog-kafka
+        link: https://github.com/samber/slog-kafka
+        description: Handler forwarding logs to Kafka.
+
+      - name: slog-logstash
+        link: https://github.com/samber/slog-logstash
+        description: Handler forwarding logs to Logstash.
+
+      - name: slog-loki
+        link: https://github.com/samber/slog-loki
+        description: Handler forwarding logs to Loki.
+
+      - name: slog-mattermost
+        link: https://github.com/samber/slog-mattermost
+        description: Handler forwarding logs to Mattermost.
+
+      - name: slog-microsoft-teams
+        link: https://github.com/samber/slog-microsoft-teams
+        description: Handler forwarding logs to Microsoft Teams.
+
+      - name: slog-rollbar
+        link: https://github.com/samber/slog-rollbar
+        description: Handler forwarding logs to Rollbar.
+
+      - name: slog-sentry
+        link: https://github.com/samber/slog-sentry
+        description: Handler forwarding logs to Sentry.
+
+      - name: slog-slack
+        link: https://github.com/samber/slog-slack
+        description: Handler forwarding logs to Slack.
+
+      - name: slog-syslog
+        link: https://github.com/samber/slog-syslog
+        description: Handler forwarding logs to Syslog.
+
+      - name: slog-telegram
+        link: https://github.com/samber/slog-telegram
+        description: Handler forwarding logs to Telegram.
+
+      - name: slog-webhook
+        link: https://github.com/samber/slog-webhook
+        description: Handler forwarding logs to a Webhook.
+
+  - name: Adapters
+    description: Adapters for other logging libraries.
+    items:
+      - name: go-hclog-slog
+        link: https://github.com/evanphx/go-hclog-slog
+        description: Handler adapter for hclog.
+
+      - name: zaphandler
+        link: https://github.com/chanchal1987/zaphandler
+        description: Handler adapter for Zap.
+
+  - name: Integrations
+    description: "`log/slog` integrations into third-party components."
+    items:
+      - name: slog-echo
+        link: https://github.com/samber/slog-echo
+        description: Echo middleware.
+
+      - name: slog-fiber
+        link: https://github.com/samber/slog-fiber
+        description: Fiber middleware.
+
+      - name: slog-gin
+        link: https://github.com/samber/slog-gin
+        description: Gin middleware.
+
+  - name: Resources
+    description: "Other resources about `log/slog`."
+    items:
+      - name: Reference documentation
+        link: https://pkg.go.dev/log/slog
+        description:
+
+      - name: Introductory blog post
+        link: https://go.dev/blog/slog
+        description:
+
+      - name: Golang Wiki page
+        link: https://github.com/golang/go/wiki/Resources-for-slog
+        description:
+
+    categories:
+      - name: Blog posts
+        description: "Blog posts about `log/slog`."
+        items: []
+
+      - name: Creating slog
+        description: "Resources documenting the creation of `log/slog`."
+        items:
+          - name: Original design proposal
+            link: https://go.googlesource.com/proposal/+/master/design/56345-structured-logging.md
+            description:
+
+          - name: Initial discussion
+            link: https://github.com/golang/go/discussions/54763
+            description:
+
+          - name: Proposal issue
+            link: https://github.com/golang/go/issues/56345
+            description:
