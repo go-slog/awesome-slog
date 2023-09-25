@@ -96,16 +96,18 @@ _Other resources about `log/slog`._
 
 ### Blog posts
 
-_Blog posts about `log/slog`_.
+_Blog posts about `log/slog`._
+
 
 **[⬆ back to top](#contents)**
 
 ### Creating slog
 
-_Resources documenting the creation of `log/slog`_.
+_Resources documenting the creation of `log/slog`._
 
 - [Original design proposal](https://go.googlesource.com/proposal/+/master/design/56345-structured-logging.md)
 - [Initial discussion](https://github.com/golang/go/discussions/54763)
 - [Proposal issue](https://github.com/golang/go/issues/56345)
 
 **[⬆ back to top](#contents)**
+
