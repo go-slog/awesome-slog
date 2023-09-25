@@ -23,6 +23,7 @@ _General purpose handlers and integrations._
 - [slog-multi](https://github.com/samber/slog-multi): Chaining handlers (pipe, router, fanout, etc).
 - [slog-sampling](https://github.com/samber/slog-sampling): Drop repetitive log entries.
 - [sloggen](https://github.com/go-simpler/sloggen): Generate custom attributes.
+- [slog-shim](https://github.com/sagikazarmark/slog-shim): Backward compatible slog support for Go <1.21.
 
 **[⬆ back to top](#contents)**
 
