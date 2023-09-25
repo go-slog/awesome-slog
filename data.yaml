@@ -10,9 +10,18 @@ categories:
         link: https://github.com/samber/slog-sampling
         description: Drop repetitive log entries.
 
+      # Potential new category: Extensions?
+      - name: sloggen
+        link: https://github.com/go-simpler/sloggen
+        description: Generate custom attributes.
+
   - name: Formatting
     description: Record and output formatters.
     items:
+      - name: console-slog
+        link: https://github.com/phsym/console-slog
+        description: Handler that prints colorized logs, similar to zerolog's console writer output without sacrificing performances.
+
       - name: devslog
         link: https://github.com/golang-cz/devslog
         description: Format logs for development.
@@ -21,9 +30,17 @@ categories:
         link: https://github.com/samber/slog-formatter
         description: Common formatters for slog + helpers for building your own.
 
+      - name: slogpfx
+        link: https://github.com/dpotapov/slogpfx
+        description: Easily prefix your log messages with attributes from the log record.
+
       - name: tint
         link: https://github.com/lmittmann/tint
         description: Handler that writes tinted logs.
+
+      - name: zlog
+        link: https://github.com/jeffry-luqman/zlog
+        description: Handler that writes beautiful, human readable logs.
 
   - name: Enrichment
     description: Handlers enriching log records.
@@ -79,6 +96,10 @@ categories:
         link: https://github.com/samber/slog-microsoft-teams
         description: Handler forwarding logs to Microsoft Teams.
 
+      - name: slog-parquet
+        link: https://github.com/samber/slog-parquet
+        description: Handler forwarding logs to an object store in parquet format.
+
       - name: slog-rollbar
         link: https://github.com/samber/slog-rollbar
         description: Handler forwarding logs to Rollbar.
@@ -110,6 +131,18 @@ categories:
         link: https://github.com/evanphx/go-hclog-slog
         description: Handler adapter for hclog.
 
+      - name: slog-logrus
+        link: https://github.com/samber/slog-logrus
+        description: Handler adapter for logrus.
+
+      - name: slog-zap
+        link: https://github.com/samber/slog-zap
+        description: Handler adapter for zap.
+
+      - name: slog-zerolog
+        link: https://github.com/samber/slog-zerolog
+        description: Handler adapter for zerolog.
+
       - name: zaphandler
         link: https://github.com/chanchal1987/zaphandler
         description: Handler adapter for Zap.
@@ -117,6 +150,10 @@ categories:
   - name: Integrations
     description: "`log/slog` integrations into third-party components."
     items:
+      - name: ginslog
+        link: https://github.com/FabienMht/ginslog
+        description: A fully featured Gin middleware.
+
       - name: slog-echo
         link: https://github.com/samber/slog-echo
         description: Echo middleware.

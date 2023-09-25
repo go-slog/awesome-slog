@@ -22,6 +22,7 @@ _General purpose handlers and integrations._
 
 - [slog-multi](https://github.com/samber/slog-multi): Chaining handlers (pipe, router, fanout, etc).
 - [slog-sampling](https://github.com/samber/slog-sampling): Drop repetitive log entries.
+- [sloggen](https://github.com/go-simpler/sloggen): Generate custom attributes.
 
 **[⬆ back to top](#contents)**
 
@@ -29,9 +30,12 @@ _General purpose handlers and integrations._
 
 _Record and output formatters._
 
+- [console-slog](https://github.com/phsym/console-slog): Handler that prints colorized logs, similar to zerolog's console writer output without sacrificing performances.
 - [devslog](https://github.com/golang-cz/devslog): Format logs for development.
 - [slog-formatter](https://github.com/samber/slog-formatter): Common formatters for slog + helpers for building your own.
+- [slogpfx](https://github.com/dpotapov/slogpfx): Easily prefix your log messages with attributes from the log record.
 - [tint](https://github.com/lmittmann/tint): Handler that writes tinted logs.
+- [zlog](https://github.com/jeffry-luqman/zlog): Handler that writes beautiful, human readable logs.
 
 **[⬆ back to top](#contents)**
 
@@ -58,6 +62,7 @@ _Handlers forwarding logs._
 - [slog-loki](https://github.com/samber/slog-loki): Handler forwarding logs to Loki.
 - [slog-mattermost](https://github.com/samber/slog-mattermost): Handler forwarding logs to Mattermost.
 - [slog-microsoft-teams](https://github.com/samber/slog-microsoft-teams): Handler forwarding logs to Microsoft Teams.
+- [slog-parquet](https://github.com/samber/slog-parquet): Handler forwarding logs to an object store in parquet format.
 - [slog-rollbar](https://github.com/samber/slog-rollbar): Handler forwarding logs to Rollbar.
 - [slog-sentry](https://github.com/samber/slog-sentry): Handler forwarding logs to Sentry.
 - [slog-slack](https://github.com/samber/slog-slack): Handler forwarding logs to Slack.
@@ -72,6 +77,9 @@ _Handlers forwarding logs._
 _Adapters for other logging libraries._
 
 - [go-hclog-slog](https://github.com/evanphx/go-hclog-slog): Handler adapter for hclog.
+- [slog-logrus](https://github.com/samber/slog-logrus): Handler adapter for logrus.
+- [slog-zap](https://github.com/samber/slog-zap): Handler adapter for zap.
+- [slog-zerolog](https://github.com/samber/slog-zerolog): Handler adapter for zerolog.
 - [zaphandler](https://github.com/chanchal1987/zaphandler): Handler adapter for Zap.
 
 **[⬆ back to top](#contents)**
@@ -80,6 +88,7 @@ _Adapters for other logging libraries._
 
 _`log/slog` integrations into third-party components._
 
+- [ginslog](https://github.com/FabienMht/ginslog): A fully featured Gin middleware.
 - [slog-echo](https://github.com/samber/slog-echo): Echo middleware.
 - [slog-fiber](https://github.com/samber/slog-fiber): Fiber middleware.
 - [slog-gin](https://github.com/samber/slog-gin): Gin middleware.
