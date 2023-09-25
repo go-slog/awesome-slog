@@ -2,6 +2,8 @@
 
 **Collection of [log/slog](https://pkg.go.dev/log/slog) related projects.**
 
+_Do you have something to add? Please read the [contributing guide](CONTRIBUTING.md) and open a pull request._
+
 ## Contents
 
 - [General](#general)
