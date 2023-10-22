@@ -2,7 +2,7 @@
 
 Thank you for contributing to this project! ❤️
 
-Please take a few minutes to read this guide before opening an pull request.
+Please take a few minutes to read this guide before opening a pull request.
 
 The purpose of this project is to help people find resources related to the recently
 (as of the time of this writing) added `log/slog` package to the standard library.
