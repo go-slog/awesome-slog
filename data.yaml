@@ -10,14 +10,18 @@ categories:
         link: https://github.com/samber/slog-sampling
         description: Drop repetitive log entries.
 
-      # Potential new category: Extensions?
-      - name: sloggen
-        link: https://github.com/go-simpler/sloggen
-        description: Generate custom attributes.
-
       - name: slog-shim
         link: https://github.com/sagikazarmark/slog-shim
         description: Backward compatible slog support for Go <1.21.
+
+      # Potential new category: Extensions?
+      - name: sloggen
+        link: https://github.com/go-simpler/sloggen
+        description: Generate various helpers.
+
+      - name: sloglint
+        link: https://github.com/go-simpler/sloglint
+        description: Ensure consistent code style.
 
   - name: Formatting
     description: Record and output formatters.
