@@ -65,6 +65,7 @@ _Handlers forwarding logs._
 - [slog-mattermost](https://github.com/samber/slog-mattermost): Handler forwarding logs to Mattermost.
 - [slog-microsoft-teams](https://github.com/samber/slog-microsoft-teams): Handler forwarding logs to Microsoft Teams.
 - [slog-parquet](https://github.com/samber/slog-parquet): Handler forwarding logs to an object store in parquet format.
+- [slog-pushover](https://github.com/SkYNewZ/slog-pushover): Handler forwarding logs to Pushover.
 - [slog-rollbar](https://github.com/samber/slog-rollbar): Handler forwarding logs to Rollbar.
 - [slog-sentry](https://github.com/samber/slog-sentry): Handler forwarding logs to Sentry.
 - [slog-slack](https://github.com/samber/slog-slack): Handler forwarding logs to Slack.
