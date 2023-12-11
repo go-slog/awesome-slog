@@ -107,6 +107,10 @@ categories:
       - name: slog-parquet
         link: https://github.com/samber/slog-parquet
         description: Handler forwarding logs to an object store in parquet format.
+      
+      - name: slog-pushover
+        link: https://github.com/SkYNewZ/slog-pushover
+        description: Handler forwarding logs to Pushover.
 
       - name: slog-rollbar
         link: https://github.com/samber/slog-rollbar
