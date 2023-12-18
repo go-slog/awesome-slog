@@ -166,6 +166,10 @@ categories:
         link: https://github.com/FabienMht/ginslog
         description: A fully featured Gin middleware.
 
+      - name: slog-chi
+        link: https://github.com/samber/slog-chi
+        description: Chi middleware.
+
       - name: slog-echo
         link: https://github.com/samber/slog-echo
         description: Echo middleware.
