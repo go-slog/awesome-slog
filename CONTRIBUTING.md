@@ -39,6 +39,10 @@ Once you have added your resource, regenerate the `README.md` file:
 make generate
 ```
 
+> [!TIP]
+> `README.md` is automatically generated from `data.yaml`.
+> You can skip running `make generate` locally if you do not have the required dependencies installed.
+
 Open a pull request on GitHub.
 
 ## What constitutes a "resource"?
