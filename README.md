@@ -92,6 +92,7 @@ _Adapters for other logging libraries._
 _`log/slog` integrations into third-party components._
 
 - [ginslog](https://github.com/FabienMht/ginslog): A fully featured Gin middleware.
+- [slog-chi](https://github.com/samber/slog-chi): Chi middleware.
 - [slog-echo](https://github.com/samber/slog-echo): Echo middleware.
 - [slog-fiber](https://github.com/samber/slog-fiber): Fiber middleware.
 - [slog-gin](https://github.com/samber/slog-gin): Gin middleware.
