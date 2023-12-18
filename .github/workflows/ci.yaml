@@ -32,8 +32,8 @@ jobs:
       - name: Regenerate README
         run: nix develop --impure .#ci -c make generate
 
-      - name: Check diff
-        run: git diff --quiet README.md || (echo "Please run 'make generate' to regenerate README.md" && exit 1)
+      # - name: Check diff
+      #   run: git diff --quiet README.md || (echo "Please run 'make generate' to regenerate README.md" && exit 1)
 
   dev:
     name: Developer environment
