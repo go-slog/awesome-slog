@@ -194,7 +194,7 @@ categories:
         description:
 
       - name: Golang Wiki page
-        link: https://github.com/golang/go/wiki/Resources-for-slog
+        link: https://go.dev/wiki/Resources-for-slog
         description:
 
     categories:
