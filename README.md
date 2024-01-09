@@ -105,7 +105,7 @@ _Other resources about `log/slog`._
 
 - [Reference documentation](https://pkg.go.dev/log/slog)
 - [Introductory blog post](https://go.dev/blog/slog)
-- [Golang Wiki page](https://github.com/golang/go/wiki/Resources-for-slog)
+- [Golang Wiki page](https://go.dev/wiki/Resources-for-slog)
 
 **[⬆ back to top](#contents)**
 
