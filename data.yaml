@@ -38,6 +38,10 @@ categories:
         link: https://github.com/samber/slog-formatter
         description: Common formatters for slog + helpers for building your own.
 
+      - name: slogor
+        link: https://gitlab.com/greyxor/slogor
+        description: A colorful slog handler.
+
       - name: slogpfx
         link: https://github.com/dpotapov/slogpfx
         description: Easily prefix your log messages with attributes from the log record.
