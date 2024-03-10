@@ -72,6 +72,10 @@ categories:
   - name: Log forwarding
     description: Handlers forwarding logs.
     items:
+      - name: slog-clickhouse
+        link: https://github.com/smallnest/slog-clickhouse
+        description: Handler forwarding logs to ClickHouse.
+
       - name: slog-datadog
         link: https://github.com/samber/slog-datadog
         description: Handler forwarding logs to Datadog.
