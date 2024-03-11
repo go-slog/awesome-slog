@@ -56,6 +56,7 @@ _Handlers enriching log records._
 
 _Handlers forwarding logs._
 
+- [slog-clickhouse](https://github.com/smallnest/slog-clickhouse): Handler forwarding logs to ClickHouse.
 - [slog-datadog](https://github.com/samber/slog-datadog): Handler forwarding logs to Datadog.
 - [slogdriver](https://github.com/jussi-kalliokoski/slogdriver): Handler forwarding logs to Stackdriver / GCP Cloud Logging.
 - [slog-fluentd](https://github.com/samber/slog-fluentd): Handler forwarding logs to FluentD.
@@ -126,4 +127,3 @@ _Resources documenting the creation of `log/slog`._
 - [Proposal issue](https://github.com/golang/go/issues/56345)
 
 **[⬆ back to top](#contents)**
-
