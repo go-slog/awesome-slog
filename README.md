@@ -20,6 +20,7 @@ _Do you have something to add? Please read the [contributing guide](CONTRIBUTING
 
 _General purpose handlers and integrations._
 
+- [slog-exp](https://github.com/smallnest/slog-exp): Individual log files foe levels, Wrapping ReplaceAttr, displaying goroutine id, etc.
 - [slog-multi](https://github.com/samber/slog-multi): Chaining handlers (pipe, router, fanout, etc).
 - [slog-sampling](https://github.com/samber/slog-sampling): Drop repetitive log entries.
 - [slog-shim](https://github.com/sagikazarmark/slog-shim): Backward compatible slog support for Go <1.21.
@@ -127,4 +128,3 @@ _Resources documenting the creation of `log/slog`._
 - [Proposal issue](https://github.com/golang/go/issues/56345)
 
 **[⬆ back to top](#contents)**
-

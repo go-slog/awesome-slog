@@ -2,6 +2,10 @@ categories:
   - name: General
     description: General purpose handlers and integrations.
     items:
+      - name: slog-exp
+        link: https://github.com/smallnest/slog-exp
+        description: Individual log files foe levels, Wrapping ReplaceAttr, displaying goroutine id, etc.
+
       - name: slog-multi
         link: https://github.com/samber/slog-multi
         description: Chaining handlers (pipe, router, fanout, etc).
