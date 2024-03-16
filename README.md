@@ -83,6 +83,7 @@ _Handlers forwarding logs._
 _Adapters for other logging libraries._
 
 - [go-hclog-slog](https://github.com/evanphx/go-hclog-slog): Handler adapter for hclog.
+- [shclog](https://github.com/ValerySidorin/shclog): Hclog adapter for slog.
 - [slog-logrus](https://github.com/samber/slog-logrus): Handler adapter for logrus.
 - [slog-zap](https://github.com/samber/slog-zap): Handler adapter for zap.
 - [slog-zerolog](https://github.com/samber/slog-zerolog): Handler adapter for zerolog.
