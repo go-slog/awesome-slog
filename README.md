@@ -83,7 +83,6 @@ _Handlers forwarding logs._
 _Adapters for other logging libraries._
 
 - [go-hclog-slog](https://github.com/evanphx/go-hclog-slog): Handler adapter for hclog.
-- [shclog](https://github.com/ValerySidorin/shclog): Hclog adapter for slog.
 - [slog-logrus](https://github.com/samber/slog-logrus): Handler adapter for logrus.
 - [slog-zap](https://github.com/samber/slog-zap): Handler adapter for zap.
 - [slog-zerolog](https://github.com/samber/slog-zerolog): Handler adapter for zerolog.
@@ -96,6 +95,7 @@ _Adapters for other logging libraries._
 _`log/slog` integrations into third-party components._
 
 - [ginslog](https://github.com/FabienMht/ginslog): A fully featured Gin middleware.
+- [shclog](https://github.com/ValerySidorin/shclog): Hclog adapter for slog.
 - [slog-chi](https://github.com/samber/slog-chi): Chi middleware.
 - [slog-echo](https://github.com/samber/slog-echo): Echo middleware.
 - [slog-fiber](https://github.com/samber/slog-fiber): Fiber middleware.

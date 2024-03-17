@@ -155,10 +155,6 @@ categories:
         link: https://github.com/evanphx/go-hclog-slog
         description: Handler adapter for hclog.
 
-      - name: shclog
-        link: https://github.com/ValerySidorin/shclog
-        description: Hclog adapter for slog.
-
       - name: slog-logrus
         link: https://github.com/samber/slog-logrus
         description: Handler adapter for logrus.
@@ -181,6 +177,10 @@ categories:
       - name: ginslog
         link: https://github.com/FabienMht/ginslog
         description: A fully featured Gin middleware.
+
+      - name: shclog
+        link: https://github.com/ValerySidorin/shclog
+        description: Hclog adapter for slog.
 
       - name: slog-chi
         link: https://github.com/samber/slog-chi
