@@ -27,6 +27,10 @@ categories:
         link: https://github.com/go-simpler/sloglint
         description: Ensure consistent code style.
 
+      - name: slog-otel
+        link: https://github.com/remychantenay/slog-otel
+        description: Correlation between slog log records and Open-Telemetry traces.
+
   - name: Formatting
     description: Record and output formatters.
     items:

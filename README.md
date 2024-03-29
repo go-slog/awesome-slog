@@ -26,6 +26,7 @@ _General purpose handlers and integrations._
 - [slog-shim](https://github.com/sagikazarmark/slog-shim): Backward compatible slog support for Go <1.21.
 - [sloggen](https://github.com/go-simpler/sloggen): Generate various helpers.
 - [sloglint](https://github.com/go-simpler/sloglint): Ensure consistent code style.
+- [slog-otel](https://github.com/remychantenay/slog-otel): Correlation between slog log records and Open-Telemetry traces.
 
 **[⬆ back to top](#contents)**
 
