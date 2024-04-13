@@ -155,6 +155,10 @@ categories:
         link: https://github.com/evanphx/go-hclog-slog
         description: Handler adapter for hclog.
 
+      - name: gslog
+        link: https://github.com/maguro/gslog
+        description: Handler adapter for Google Cloud Logging.
+
       - name: slog-logrus
         link: https://github.com/samber/slog-logrus
         description: Handler adapter for logrus.
