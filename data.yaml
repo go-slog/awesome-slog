@@ -182,6 +182,10 @@ categories:
         link: https://github.com/FabienMht/ginslog
         description: A fully featured Gin middleware.
 
+      - name: shclog
+        link: https://github.com/ValerySidorin/shclog
+        description: Hclog adapter for slog.
+
       - name: slog-chi
         link: https://github.com/samber/slog-chi
         description: Chi middleware.
