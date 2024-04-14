@@ -50,6 +50,7 @@ _Handlers enriching log records._
 - [masq](https://github.com/m-mizutani/masq): Redact sensitive data in logs.
 - [otelslog](https://github.com/go-slog/otelslog): Handler attaching OpenTelemetry trace and resource details to logs.
 - [slog-context](https://github.com/PumpkinSeed/slog-context): Attach arbitrary key-value pairs to log records through context.
+- [slog-otel](https://github.com/remychantenay/slog-otel): Correlation between slog log records and Open-Telemetry traces.
 
 **[⬆ back to top](#contents)**
 
