@@ -69,6 +69,10 @@ categories:
         link: https://github.com/go-slog/otelslog
         description: Handler attaching OpenTelemetry trace and resource details to logs.
 
+      - name: slog-aws-lambda
+        link: https://github.com/jbleduigou/slog-aws-lambda
+        description: Handler for AWS Lambda Functions.
+
       - name: slog-context
         link: https://github.com/PumpkinSeed/slog-context
         description: Attach arbitrary key-value pairs to log records through context.
