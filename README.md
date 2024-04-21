@@ -35,6 +35,7 @@ _Record and output formatters._
 
 - [console-slog](https://github.com/phsym/console-slog): Handler that prints colorized logs, similar to zerolog's console writer output without sacrificing performances.
 - [devslog](https://github.com/golang-cz/devslog): Format logs for development.
+- [golog](https://github.com/primalskill/golog): Development, discard and production handlers with sensible formatting.
 - [slog-formatter](https://github.com/samber/slog-formatter): Common formatters for slog + helpers for building your own.
 - [slogor](https://gitlab.com/greyxor/slogor): A colorful slog handler.
 - [slogpfx](https://github.com/dpotapov/slogpfx): Easily prefix your log messages with attributes from the log record.
