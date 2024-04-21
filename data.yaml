@@ -38,6 +38,10 @@ categories:
         link: https://github.com/golang-cz/devslog
         description: Format logs for development.
 
+      - name: golog
+        link: https://github.com/primalskill/golog
+        description: Development, discard and production handlers with sensible formatting.
+
       - name: slog-formatter
         link: https://github.com/samber/slog-formatter
         description: Common formatters for slog + helpers for building your own.
