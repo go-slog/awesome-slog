@@ -62,6 +62,10 @@ categories:
         link: https://github.com/jeffry-luqman/zlog
         description: Handler that writes beautiful, human readable logs.
 
+      - name: zlog
+        link: https://github.com/icefed/zlog
+        description: Human-friendly output like zap development, json structured logging with more features for slog.
+
   - name: Enrichment
     description: Handlers enriching log records.
     items:

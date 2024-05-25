@@ -41,6 +41,7 @@ _Record and output formatters._
 - [slogpfx](https://github.com/dpotapov/slogpfx): Easily prefix your log messages with attributes from the log record.
 - [tint](https://github.com/lmittmann/tint): Handler that writes tinted logs.
 - [zlog](https://github.com/jeffry-luqman/zlog): Handler that writes beautiful, human readable logs.
+- [zlog](https://github.com/icefed/zlog): Human-friendly output like zap development, json structured logging with more features for slog.
 
 **[⬆ back to top](#contents)**
 
