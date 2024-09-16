@@ -222,6 +222,17 @@ categories:
         link: https://github.com/samber/slog-gin
         description: Gin middleware.
 
+  - name: Testing
+    description: Testing utilities for `log/slog`.
+    items:
+      - name: slogassert
+        link: https://github.com/thejerf/slogassert
+        description: slog handler for testing slog code logs expected results.
+
+      - name: slogt
+        link: https://github.com/neilotoole/slogt
+        description: Bridge between Go `testing.T` and `log/slog`.
+
   - name: Resources
     description: "Other resources about `log/slog`."
     items:
