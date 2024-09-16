@@ -12,6 +12,7 @@ _Do you have something to add? Please read the [contributing guide](CONTRIBUTING
 - [Log forwarding](#log-forwarding)
 - [Adapters](#adapters)
 - [Integrations](#integrations)
+- [Testing](#testing)
 - [Resources](#resources)
   - [Blog posts](#blog-posts)
   - [Creating slog](#creating-slog)
@@ -106,6 +107,15 @@ _`log/slog` integrations into third-party components._
 - [slog-echo](https://github.com/samber/slog-echo): Echo middleware.
 - [slog-fiber](https://github.com/samber/slog-fiber): Fiber middleware.
 - [slog-gin](https://github.com/samber/slog-gin): Gin middleware.
+
+**[⬆ back to top](#contents)**
+
+## Testing
+
+_Testing utilities for `log/slog`._
+
+- [slogassert](https://github.com/thejerf/slogassert): slog handler for testing slog code logs expected results.
+- [slogt](https://github.com/neilotoole/slogt): Bridge between Go `testing.T` and `log/slog`.
 
 **[⬆ back to top](#contents)**
 
