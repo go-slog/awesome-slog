@@ -18,6 +18,10 @@ categories:
         link: https://github.com/sagikazarmark/slog-shim
         description: Backward compatible slog support for Go <1.21.
 
+      - name: slogbuffer
+        link: https://github.com/delicb/slogbuffer
+        description: Buffer log records until real handler is defined.
+
       # Potential new category: Extensions?
       - name: sloggen
         link: https://github.com/go-simpler/sloggen
