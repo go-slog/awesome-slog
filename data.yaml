@@ -22,6 +22,10 @@ categories:
         link: https://github.com/delicb/slogbuffer
         description: Buffer log records until real handler is defined.
 
+      - name: slogscope
+        link: https://github.com/apperia-de/slogscope
+        description: Package based log levels for more fine grained control over logging behavior in large project.
+
       # Potential new category: Extensions?
       - name: sloggen
         link: https://github.com/go-simpler/sloggen
