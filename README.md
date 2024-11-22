@@ -95,6 +95,7 @@ _Adapters for other logging libraries._
 - [slog-zap](https://github.com/samber/slog-zap): Handler adapter for zap.
 - [slog-zerolog](https://github.com/samber/slog-zerolog): Handler adapter for zerolog.
 - [zaphandler](https://github.com/chanchal1987/zaphandler): Handler adapter for Zap.
+- [slog-gokit](https://github.com/tjhop/slog-gokit): Go slog handler adapter for go-kit/log.
 
 **[⬆ back to top](#contents)**
 

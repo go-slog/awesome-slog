@@ -199,6 +199,10 @@ categories:
         link: https://github.com/chanchal1987/zaphandler
         description: Handler adapter for Zap.
 
+      - name: slog-gokit
+        link: https://github.com/tjhop/slog-gokit
+        description: Go slog handler adapter for go-kit/log.
+
   - name: Integrations
     description: "`log/slog` integrations into third-party components."
     items:
