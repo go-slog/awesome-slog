@@ -183,6 +183,10 @@ categories:
         link: https://github.com/maguro/gslog
         description: Handler adapter for Google Cloud Logging.
 
+      - name: slog-gokit
+        link: https://github.com/tjhop/slog-gokit
+        description: Go slog handler adapter for go-kit/log.
+
       - name: slog-logrus
         link: https://github.com/samber/slog-logrus
         description: Handler adapter for logrus.
@@ -198,10 +202,6 @@ categories:
       - name: zaphandler
         link: https://github.com/chanchal1987/zaphandler
         description: Handler adapter for Zap.
-
-      - name: slog-gokit
-        link: https://github.com/tjhop/slog-gokit
-        description: Go slog handler adapter for go-kit/log.
 
   - name: Integrations
     description: "`log/slog` integrations into third-party components."
