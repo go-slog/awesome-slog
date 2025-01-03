@@ -91,6 +91,7 @@ _Adapters for other logging libraries._
 
 - [go-hclog-slog](https://github.com/evanphx/go-hclog-slog): Handler adapter for hclog.
 - [gslog](https://github.com/maguro/gslog): Handler adapter for Google Cloud Logging.
+- [slog-gokit](https://github.com/tjhop/slog-gokit): Go slog handler adapter for go-kit/log.
 - [slog-logrus](https://github.com/samber/slog-logrus): Handler adapter for logrus.
 - [slog-zap](https://github.com/samber/slog-zap): Handler adapter for zap.
 - [slog-zerolog](https://github.com/samber/slog-zerolog): Handler adapter for zerolog.
