@@ -40,6 +40,7 @@ _Record and output formatters._
 - [devslog](https://github.com/golang-cz/devslog): Format logs for development.
 - [golog](https://github.com/primalskill/golog): Development, discard and production handlers with sensible formatting.
 - [slog-formatter](https://github.com/samber/slog-formatter): Common formatters for slog + helpers for building your own.
+- [slogcolor](https://github.com/MatusOllah/slogcolor): Color handler for log/slog.
 - [slogor](https://gitlab.com/greyxor/slogor): A colorful slog handler.
 - [slogpfx](https://github.com/dpotapov/slogpfx): Easily prefix your log messages with attributes from the log record.
 - [tint](https://github.com/lmittmann/tint): Handler that writes tinted logs.

@@ -53,6 +53,10 @@ categories:
       - name: slog-formatter
         link: https://github.com/samber/slog-formatter
         description: Common formatters for slog + helpers for building your own.
+      
+      - name: slogcolor
+        link: https://github.com/MatusOllah/slogcolor
+        description: Color handler for log/slog.
 
       - name: slogor
         link: https://gitlab.com/greyxor/slogor
