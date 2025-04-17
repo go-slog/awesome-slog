@@ -2,9 +2,13 @@ categories:
   - name: General
     description: General purpose handlers and integrations.
     items:
+      - name: dynamic-level-handler
+        link: https://github.com/gekatateam/dynamic-level-handler
+        description: Wrapper for `slog.Handler` that supports level override for concrete logger.
+
       - name: slog-exp
         link: https://github.com/smallnest/slog-exp
-        description: Individual log files foe levels, Wrapping ReplaceAttr, displaying goroutine id, etc.
+        description: Individual log files for levels, Wrapping ReplaceAttr, displaying goroutine id, etc.
 
       - name: slog-multi
         link: https://github.com/samber/slog-multi
