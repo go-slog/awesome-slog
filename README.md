@@ -22,6 +22,7 @@ _Do you have something to add? Please read the [contributing guide](CONTRIBUTING
 _General purpose handlers and integrations._
 
 - [dynamic-level-handler](https://github.com/gekatateam/dynamic-level-handler): Wrapper for `slog.Handler` that supports level override for concrete logger.
+- [slog-handler-override](https://github.com/martin-viggiano/slog-level-override): A `slog.Handler` wrapper that allows runtime override of any handler's log level.
 - [slog-exp](https://github.com/smallnest/slog-exp): Individual log files for levels, Wrapping ReplaceAttr, displaying goroutine id, etc.
 - [slog-multi](https://github.com/samber/slog-multi): Chaining handlers (pipe, router, fanout, etc).
 - [slog-sampling](https://github.com/samber/slog-sampling): Drop repetitive log entries.
