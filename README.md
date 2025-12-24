@@ -85,6 +85,7 @@ _Handlers forwarding logs._
 - [slog-syslog](https://github.com/samber/slog-syslog): Handler forwarding logs to Syslog.
 - [slog-telegram](https://github.com/samber/slog-telegram): Handler forwarding logs to Telegram.
 - [slog-webhook](https://github.com/samber/slog-webhook): Handler forwarding logs to a Webhook.
+- [slog-journal](https://github.com/systemd/slog-journal): Handler forwarding logs to systemd journal.
 
 **[⬆ back to top](#contents)**
 
