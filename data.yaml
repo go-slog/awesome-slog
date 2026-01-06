@@ -61,7 +61,7 @@ categories:
       - name: slog-formatter
         link: https://github.com/samber/slog-formatter
         description: Common formatters for slog + helpers for building your own.
-      
+
       - name: slogcolor
         link: https://github.com/MatusOllah/slogcolor
         description: Color handler for log/slog.
@@ -194,6 +194,10 @@ categories:
       - name: gslog
         link: https://github.com/maguro/gslog
         description: Handler adapter for Google Cloud Logging.
+
+      - name: slogan
+        link: https://github.com/openclosed-dev/slogan
+        description: Handler adapter for Azure Application Insights.
 
       - name: slog-gokit
         link: https://github.com/tjhop/slog-gokit
