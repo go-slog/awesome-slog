@@ -275,7 +275,10 @@ categories:
     categories:
       - name: Blog posts
         description: "Blog posts about `log/slog`."
-        items: []
+        items:
+          - name: Logging in Go with Slog
+            link: https://last9.io/blog/logging-in-go-with-slog/
+            description: Comprehensive guide covering slog basics, custom handlers, and production patterns.
 
       - name: Creating slog
         description: "Resources documenting the creation of `log/slog`."
