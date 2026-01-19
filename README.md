@@ -139,7 +139,7 @@ _Other resources about `log/slog`._
 
 _Blog posts about `log/slog`._
 
-- [Logging in Go with Slog](https://last9.io/blog/logging-in-go-with-slog/): Comprehensive guide covering slog basics, custom handlers, and production patterns.
+- [Logging in Go with Slog](https://last9.io/blog/logging-in-go-with-slog-a-detailed-guide/): Comprehensive guide covering slog basics, custom handlers, and production patterns.
 
 **[⬆ back to top](#contents)**
 
