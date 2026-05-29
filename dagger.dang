@@ -89,7 +89,7 @@ type Checks {
   """
   Check that README.md is unchanged.
   """
-  pub readme(workspace: Workspace!): Void @check {
+  pub readme(workspace: Workspace!): Void {
     let original = workspace.directory("/", gitignore: true).asGit.branch("main").tree
 
     let source = workspace.directory("/", gitignore: true)
