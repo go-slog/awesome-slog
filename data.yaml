@@ -99,6 +99,9 @@ categories:
       - name: slog-graylog
         link: https://github.com/samber/slog-graylog
         description: Handler forwarding logs to Graylog.
+      - name: slog-journal
+        link: https://github.com/systemd/slog-journal
+        description: Handler forwarding logs to systemd journal.
       - name: slog-kafka
         link: https://github.com/samber/slog-kafka
         description: Handler forwarding logs to Kafka.
