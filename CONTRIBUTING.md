@@ -11,13 +11,7 @@ If you find something useful or create a resource yourself, feel free to add it 
 
 ## Development
 
-**For an optimal developer experience, it is recommended to install [Nix](https://nixos.org/download.html) and [direnv](https://direnv.net/docs/installation.html).**
-
-If you do not wish to install Nix, you can install the dependencies by running:
-
-```shell
-make deps
-```
+**For an optimal developer experience, it is recommended to install [devenv](https://devenv.sh/).**
 
 ## Adding a new resource to the list
 
@@ -31,17 +25,7 @@ Add the following details to the `data.yaml` file:
 - Link to the resource
 - Description
 
-Please make sure to maintain an alphabetical order.
-
-Once you have added your resource, regenerate the `README.md` file:
-
-```shell
-make generate
-```
-
-> [!TIP]
-> `README.md` is automatically generated from `data.yaml`.
-> You can skip running `make generate` locally if you do not have the required dependencies installed.
+**Please make sure to maintain an alphabetical order.**
 
 Open a pull request on GitHub.
 

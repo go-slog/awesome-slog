@@ -21,20 +21,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: Set up Nix
-        uses: cachix/install-nix-action@3715ab1a11cac9e991980d7b4a28d80c7ebdd8f9 # v27
-        with:
-          extra_nix_config: |
-            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up magic Nix cache
-        uses: DeterminateSystems/magic-nix-cache-action@908b263ff629f4cc17666315b7fd3ec127c6244d # v14
-
-      - name: Prepare Nix shell
-        run: nix develop --impure .#ci
-
       - name: Regenerate README
-        run: nix develop --impure .#ci -c make generate
+        uses: dagger/dagger-for-github@27b130bf0f79a7f6fbbbe0fbca6760dc9bb40a77 # v8.4.0
+        with:
+          call: --lock=pinned generate export --path .
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v7

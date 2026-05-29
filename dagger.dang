@@ -1,0 +1,390 @@
+pub GOMPLATE_VERSION = "v5.0.0"
+
+type AwesomeSlog {
+  pub checks: Checks! { Checks(self) }
+
+  """
+  Generates the README file.
+  """
+  pub generate(workspace: Workspace!): Changeset! @check {
+    let source = workspace.directory("", gitignore: true, include: ["README.md", "README.tmpl.md", "data.yaml"])
+
+    Dagger
+      .container
+      .from("hairyhenderson/gomplate:" + GOMPLATE_VERSION)
+      .withWorkdir("/work")
+      .withMountedDirectory("/work", source)
+      .withExec(
+        ["--datasource", "contents=./data.yaml", "--file", "README.tmpl.md"],
+        useEntrypoint: true,
+        redirectStdout: "README.md",
+      )
+      .directory("/work")
+      .changes(source)
+  }
+
+  """
+  Auto format data.yaml and README.md.
+  """
+  pub format(workspace: Workspace!): Changeset! @generate {
+    Dagger.changeset.withChangesets([
+      self.dprint(workspace).fmt(excludes: ["README.md"]),
+      self.sortData(workspace),
+    ])
+  }
+
+  let sortData(workspace: Workspace!): Changeset! {
+    let source = workspace.directory("", gitignore: true, include: ["data.yaml"])
+
+    Dagger
+      .container
+      .from("mikefarah/yq:4.53.2@sha256:0cb4a78491b6e62ee8a9bf4fbeacbd15b5013d19bc420591b05383a696315e60")
+      .withUser("root")
+      .withWorkdir("/work")
+      .withMountedDirectory(".", source)
+      .withExec(["yq", "-i", """(.. | select(has("items")).items) |= sort_by(.name)""", "data.yaml"])
+      .directory("/work")
+      .changes(source)
+  }
+
+  let dprint(workspace: Workspace!): Dprint! {
+    Dprint(workspace, version: "0.54.0")
+  }
+}
+
+type Checks {
+  let parent: AwesomeSlog!
+
+  """
+  Lint YAML and Markdown files.
+  """
+  pub lint(workspace: Workspace!): Container! @check {
+    parent.dprint(workspace).check(excludes: ["README.md"])
+  }
+
+  """
+  Check that items in data.yaml are sorted alphabetically.
+  """
+  pub sorted(workspace: Workspace!): Void @check {
+    let data = workspace.file("data.yaml")
+
+    let exitCode = Dagger
+      .container
+      .from("mikefarah/yq:4.53.2")
+      .withWorkdir("/work")
+      .withMountedFile("data.yaml", data)
+      .withExec(
+        ["yq", "-e", """[.. | select(has("items")).items | (map(.name) | @json) == (map(.name) | sort | @json)] | all""", "data.yaml"],
+        expect: ReturnType.ANY,
+      )
+      .exitCode
+
+    if (exitCode != 0) {
+      raise "items in data.yaml are not sorted alphabetically"
+    }
+
+    null
+  }
+
+  """
+  Check that README.md is unchanged.
+  """
+  pub readme(workspace: Workspace!): Void @check {
+    let original = workspace.directory("/", gitignore: true).asGit.branch("main").tree
+
+    let source = workspace.directory("/", gitignore: true)
+
+    let changes = original.changes(source)
+
+    if (changes.modifiedPaths.contains("README.md") or changes.removedPaths.contains("README.md")) {
+      raise "please do not edit README.md directly: CI will regenerate it on merge"
+    }
+
+    null
+  }
+}
+
+let ALPINE = "alpine:3.23.4"
+
+enum ConfigDiscovery {
+  DEFAULT
+  IGNORE_DESCENDANTS
+  GLOBAL
+  FALSE
+}
+
+enum LogLevel {
+  DEBUG
+  INFO
+  WARN
+  ERROR
+  SILENT
+}
+
+type Dprint {
+  """
+  Dprint version.
+  """
+  pub version: String!
+
+  let source: Directory!
+
+  let plugins: [String!]!
+  let localPlugins: [File!]!
+
+  let logLevel: LogLevel
+
+  new(
+    workspace: Workspace!,
+    """
+    Dprint version.
+    """
+    version: String! = "latest",
+    """
+    Plugins to install globally.
+    """
+    plugins: [String!]! = [],
+    """
+    Locally available plugins to install globally.
+    """
+    localPlugins: [File!]! = [],
+    """
+    Log level.
+    """
+    logLevel: LogLevel = null,
+  ) {
+    self.version = version
+
+    self.source = workspace.directory("", gitignore: true)
+
+    self.plugins = plugins
+    self.localPlugins = localPlugins
+
+    self.logLevel = logLevel
+
+    self
+  }
+
+  let downloadUrl(version: String!, plugins: [File!]! = []): String! {
+    if (version == "latest") {
+      return "https://github.com/dprint/dprint/releases/latest/download/" + downloadName
+    }
+
+    "https://github.com/dprint/dprint/releases/download/" + version + "/" + downloadName
+  }
+
+  let downloadName: String! {
+    let arch = case (Dagger.defaultPlatform) {
+      "linux/amd64" => "x86_64"
+      "linux/arm64" => "aarch64"
+      else => raise "unsupported platform: " + toString(Dagger.defaultPlatform).trim("\"")
+    }
+
+    "dprint-" + arch + "-unknown-linux-musl.zip"
+  }
+
+  pub container: Container! {
+    let archive = Dagger.http(downloadUrl(self.version))
+
+    let container = Dagger
+      .container
+      .from(ALPINE)
+      .withMountedFile("/dprint.zip", archive)
+      .withExec(["unzip", "/dprint.zip", "-d", "/usr/local/bin"])
+      .withoutMount("/dprint.zip")
+      .withMountedCache("/root/.cache/dprint", Dagger.cacheVolume("dprint"))
+      .withFile("/root/.config/dprint/dprint.json", Dagger.file("dprint.json", "{}"))
+
+    self.localPlugins.each { plugin =>
+      let path = "/opt/dprint/plugins/" + plugin.name
+
+      container = container
+        .withFile(path, plugin)
+        .withExec(["dprint", "add", "--global", "file://" + path])
+    }
+
+    self.plugins.each { plugin =>
+      container = container.withExec(["dprint", "add", "--global", plugin])
+    }
+
+    container
+  }
+
+  """
+  Format files.
+  """
+  pub fmt(
+    """
+    Glob patterns to match files to format.
+    """
+    files: [String!]! = [],
+    """
+    Glob patterns to exclude files from formatting.
+    """
+    excludes: [String!]! = [],
+    """
+    Override the patterns in the config file.
+    """
+    includesOverride: [String!]! = [],
+    """
+    Ignore the patterns in the config file.
+    """
+    excludesOverride: [String!]! = [],
+    """
+    Custom configuration file to use.
+    """
+    config: File = null,
+    """
+    Change the way dprint discovers configuration files.
+    """
+    configDiscovery: ConfigDiscovery = null,
+  ): Changeset! @check {
+    let args = self.fmtCheckArgs(files, excludes, includesOverride, excludesOverride)
+
+    self
+      .run(
+        "fmt",
+        args,
+        config: config,
+        configDiscovery: configDiscovery,
+      )
+      .directory("/work/src")
+      .changes(self.source)
+  }
+
+  let fmtCheckArgs(
+    files: [String!]! = [],
+    excludes: [String!]! = [],
+    includesOverride: [String!]! = [],
+    excludesOverride: [String!]! = [],
+  ): [String!]! {
+    let args = []
+
+    if (excludes != []) {
+      args += ["--excludes"] + excludes
+    }
+
+    if (includesOverride != []) {
+      args += ["--includes-override"] + includesOverride
+    }
+
+    if (excludesOverride != []) {
+      args += ["--excludes-override"] + excludesOverride
+    }
+
+    if (files != []) {
+      args += files
+    }
+
+    args
+  }
+
+  """
+  Check unformatted files.
+  """
+  pub check(
+    """
+    Display only the file paths that aren't formatted.
+    """
+    listDifferent: Boolean! = false,
+    """
+    Instead of checking every file, CLI stops on the first failure.
+    """
+    failFast: Boolean! = false,
+    """
+    Glob patterns to match files to format.
+    """
+    files: [String!]! = [],
+    """
+    Glob patterns to exclude files from formatting.
+    """
+    excludes: [String!]! = [],
+    """
+    Override the patterns in the config file.
+    """
+    includesOverride: [String!]! = [],
+    """
+    Ignore the patterns in the config file.
+    """
+    excludesOverride: [String!]! = [],
+    """
+    Custom configuration file to use.
+    """
+    config: File = null,
+    """
+    Change the way dprint discovers configuration files.
+    """
+    configDiscovery: ConfigDiscovery = null,
+  ): Container! @check {
+    let args = []
+
+    if (listDifferent) {
+      args += ["--list-different"]
+    }
+
+    if (failFast) {
+      args += ["--fail-fast"]
+    }
+
+    args += self.fmtCheckArgs(files, excludes, includesOverride, excludesOverride)
+
+    self.run(
+      "check",
+      args,
+      config: config,
+      configDiscovery: configDiscovery,
+    )
+  }
+
+  """
+  Output the resolved configuration file.
+  """
+  pub config(
+    """
+    Custom configuration file to use.
+    """
+    config: File = null,
+    """
+    Change the way dprint discovers configuration files.
+    """
+    configDiscovery: ConfigDiscovery = null,
+  ): File! {
+    let stdout = self.run(
+      "output-resolved-config",
+      config: config,
+      configDiscovery: configDiscovery,
+    ).stdout
+
+    Dagger.file("config.json", stdout)
+  }
+
+  let run(
+    command: String!,
+    args: [String!]! = [],
+    container: Container! = self.container,
+    config: File = null,
+    configDiscovery: ConfigDiscovery = null,
+  ): Container! @check {
+    let _args = ["dprint", command]
+
+    if (config != null) {
+      container = container.withMountedFile("/work/config.json", config)
+      _args += ["--config", "/work/config.json"]
+    }
+
+    if (configDiscovery != null) {
+      _args += ["--config-discovery", toString(configDiscovery).trim("\"").toLower.replace("_", "-")]
+    }
+
+    if (self.logLevel != null) {
+      _args += ["--log-level", toString(self.logLevel).trim("\"").toLower]
+    }
+
+    args = _args + args
+
+    container
+      .withWorkdir("/work/src")
+      .withMountedDirectory(".", self.source)
+      .withExec(args)
+  }
+}

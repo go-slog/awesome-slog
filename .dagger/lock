@@ -1,0 +1,5 @@
+[["version","1"]]
+["","container.from",["docker.io/hairyhenderson/gomplate:v5.0.0","linux/arm64"],"sha256:de1d3f56cb6666896b90987e6de80a932ba37e93e5c0612f32cb29d1ca78b932","pin"]
+["","container.from",["docker.io/library/alpine:3.22.1","linux/arm64"],"sha256:4bcff63911fcb4448bd4fdacec207030997caf25e9bea4045fa6c8c44de311d1","pin"]
+["","container.from",["docker.io/library/alpine:3.23.4","linux/arm64"],"sha256:5b10f432ef3da1b8d4c7eb6c487f2f5a8f096bc91145e68878dd4a5019afde11","pin"]
+["","container.from",["docker.io/mikefarah/yq:4.53.2","linux/arm64"],"sha256:0cb4a78491b6e62ee8a9bf4fbeacbd15b5013d19bc420591b05383a696315e60","pin"]

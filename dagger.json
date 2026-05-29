@@ -1,0 +1,7 @@
+{
+  "name": "awesome-slog",
+  "engineVersion": "v0.21.0",
+  "sdk": {
+    "source": "dang"
+  }
+}

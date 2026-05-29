@@ -1,0 +1,9 @@
+{
+  "markdown": {},
+  "yaml": {},
+  "excludes": ["README.tmpl.md"],
+  "plugins": [
+    "https://plugins.dprint.dev/markdown-0.22.1.wasm",
+    "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.6.0.wasm"
+  ]
+}
