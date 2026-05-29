@@ -22,15 +22,15 @@ _Do you have something to add? Please read the [contributing guide](CONTRIBUTING
 _General purpose handlers and integrations._
 
 - [dynamic-level-handler](https://github.com/gekatateam/dynamic-level-handler): Wrapper for `slog.Handler` that supports level override for concrete logger.
-- [slog-handler-override](https://github.com/martin-viggiano/slog-level-override): A `slog.Handler` wrapper that allows runtime override of any handler's log level.
 - [slog-exp](https://github.com/smallnest/slog-exp): Individual log files for levels, Wrapping ReplaceAttr, displaying goroutine id, etc.
+- [slog-handler-override](https://github.com/martin-viggiano/slog-level-override): A `slog.Handler` wrapper that allows runtime override of any handler's log level.
 - [slog-multi](https://github.com/samber/slog-multi): Chaining handlers (pipe, router, fanout, etc).
 - [slog-sampling](https://github.com/samber/slog-sampling): Drop repetitive log entries.
 - [slog-shim](https://github.com/sagikazarmark/slog-shim): Backward compatible slog support for Go <1.21.
 - [slogbuffer](https://github.com/delicb/slogbuffer): Buffer log records until real handler is defined.
-- [slogscope](https://github.com/apperia-de/slogscope): Package based log levels for more fine grained control over logging behavior in large project.
 - [sloggen](https://github.com/go-simpler/sloggen): Generate various helpers.
 - [sloglint](https://github.com/go-simpler/sloglint): Ensure consistent code style.
+- [slogscope](https://github.com/apperia-de/slogscope): Package based log levels for more fine grained control over logging behavior in large project.
 
 **[⬆ back to top](#contents)**
 
@@ -69,7 +69,6 @@ _Handlers forwarding logs._
 
 - [slog-clickhouse](https://github.com/smallnest/slog-clickhouse): Handler forwarding logs to ClickHouse.
 - [slog-datadog](https://github.com/samber/slog-datadog): Handler forwarding logs to Datadog.
-- [slogdriver](https://github.com/jussi-kalliokoski/slogdriver): Handler forwarding logs to Stackdriver / GCP Cloud Logging.
 - [slog-fluentd](https://github.com/samber/slog-fluentd): Handler forwarding logs to FluentD.
 - [slog-graylog](https://github.com/samber/slog-graylog): Handler forwarding logs to Graylog.
 - [slog-kafka](https://github.com/samber/slog-kafka): Handler forwarding logs to Kafka.
@@ -85,6 +84,7 @@ _Handlers forwarding logs._
 - [slog-syslog](https://github.com/samber/slog-syslog): Handler forwarding logs to Syslog.
 - [slog-telegram](https://github.com/samber/slog-telegram): Handler forwarding logs to Telegram.
 - [slog-webhook](https://github.com/samber/slog-webhook): Handler forwarding logs to a Webhook.
+- [slogdriver](https://github.com/jussi-kalliokoski/slogdriver): Handler forwarding logs to Stackdriver / GCP Cloud Logging.
 
 **[⬆ back to top](#contents)**
 
@@ -94,11 +94,11 @@ _Adapters for other logging libraries._
 
 - [go-hclog-slog](https://github.com/evanphx/go-hclog-slog): Handler adapter for hclog.
 - [gslog](https://github.com/maguro/gslog): Handler adapter for Google Cloud Logging.
-- [slogan](https://github.com/openclosed-dev/slogan): Handler adapter for Azure Application Insights.
 - [slog-gokit](https://github.com/tjhop/slog-gokit): Go slog handler adapter for go-kit/log.
 - [slog-logrus](https://github.com/samber/slog-logrus): Handler adapter for logrus.
 - [slog-zap](https://github.com/samber/slog-zap): Handler adapter for zap.
 - [slog-zerolog](https://github.com/samber/slog-zerolog): Handler adapter for zerolog.
+- [slogan](https://github.com/openclosed-dev/slogan): Handler adapter for Azure Application Insights.
 - [zaphandler](https://github.com/chanchal1987/zaphandler): Handler adapter for Zap.
 
 **[⬆ back to top](#contents)**
@@ -129,9 +129,9 @@ _Testing utilities for `log/slog`._
 
 _Other resources about `log/slog`._
 
-- [Reference documentation](https://pkg.go.dev/log/slog)
-- [Introductory blog post](https://go.dev/blog/slog)
 - [Golang Wiki page](https://go.dev/wiki/Resources-for-slog)
+- [Introductory blog post](https://go.dev/blog/slog)
+- [Reference documentation](https://pkg.go.dev/log/slog)
 
 **[⬆ back to top](#contents)**
 
@@ -147,8 +147,8 @@ _Blog posts about `log/slog`._
 
 _Resources documenting the creation of `log/slog`._
 
-- [Original design proposal](https://go.googlesource.com/proposal/+/master/design/56345-structured-logging.md)
 - [Initial discussion](https://github.com/golang/go/discussions/54763)
+- [Original design proposal](https://go.googlesource.com/proposal/+/master/design/56345-structured-logging.md)
 - [Proposal issue](https://github.com/golang/go/issues/56345)
 
 **[⬆ back to top](#contents)**
