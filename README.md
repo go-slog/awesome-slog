@@ -71,6 +71,7 @@ _Handlers forwarding logs._
 - [slog-datadog](https://github.com/samber/slog-datadog): Handler forwarding logs to Datadog.
 - [slog-fluentd](https://github.com/samber/slog-fluentd): Handler forwarding logs to FluentD.
 - [slog-graylog](https://github.com/samber/slog-graylog): Handler forwarding logs to Graylog.
+- [slog-journal](https://github.com/systemd/slog-journal): Handler forwarding logs to systemd journal.
 - [slog-kafka](https://github.com/samber/slog-kafka): Handler forwarding logs to Kafka.
 - [slog-logstash](https://github.com/samber/slog-logstash): Handler forwarding logs to Logstash.
 - [slog-loki](https://github.com/samber/slog-loki): Handler forwarding logs to Loki.
