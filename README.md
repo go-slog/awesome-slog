@@ -67,6 +67,7 @@ _Handlers enriching log records._
 
 _Handlers forwarding logs._
 
+- [gslog](https://github.com/maguro/gslog): Handler forwarding logs to Google Cloud Logging, with OpenTelemetry trace and Kubernetes pod labels.
 - [slog-clickhouse](https://github.com/smallnest/slog-clickhouse): Handler forwarding logs to ClickHouse.
 - [slog-datadog](https://github.com/samber/slog-datadog): Handler forwarding logs to Datadog.
 - [slog-fluentd](https://github.com/samber/slog-fluentd): Handler forwarding logs to FluentD.
@@ -94,7 +95,6 @@ _Handlers forwarding logs._
 _Adapters for other logging libraries._
 
 - [go-hclog-slog](https://github.com/evanphx/go-hclog-slog): Handler adapter for hclog.
-- [gslog](https://github.com/maguro/gslog): Handler adapter for Google Cloud Logging.
 - [slog-gokit](https://github.com/tjhop/slog-gokit): Go slog handler adapter for go-kit/log.
 - [slog-logrus](https://github.com/samber/slog-logrus): Handler adapter for logrus.
 - [slog-zap](https://github.com/samber/slog-zap): Handler adapter for zap.

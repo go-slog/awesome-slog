@@ -87,6 +87,9 @@ categories:
   - name: Log forwarding
     description: Handlers forwarding logs.
     items:
+      - name: gslog
+        link: https://github.com/maguro/gslog
+        description: Handler forwarding logs to Google Cloud Logging, with OpenTelemetry trace and Kubernetes pod labels.
       - name: slog-clickhouse
         link: https://github.com/smallnest/slog-clickhouse
         description: Handler forwarding logs to ClickHouse.
@@ -150,9 +153,6 @@ categories:
       - name: go-hclog-slog
         link: https://github.com/evanphx/go-hclog-slog
         description: Handler adapter for hclog.
-      - name: gslog
-        link: https://github.com/maguro/gslog
-        description: Handler adapter for Google Cloud Logging.
       - name: slog-gokit
         link: https://github.com/tjhop/slog-gokit
         description: Go slog handler adapter for go-kit/log.
