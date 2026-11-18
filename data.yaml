@@ -69,6 +69,9 @@ categories:
   - name: Enrichment
     description: Handlers enriching log records.
     items:
+      - name: embargo
+        link: https://github.com/nao1215/embargo
+        description: Mask secrets and personal data in slog records without struct tags.
       - name: masq
         link: https://github.com/m-mizutani/masq
         description: Redact sensitive data in logs.
