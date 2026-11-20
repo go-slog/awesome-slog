@@ -87,6 +87,9 @@ categories:
   - name: Log forwarding
     description: Handlers forwarding logs.
     items:
+      - name: axiom-go/adapters/slog
+        link: https://github.com/axiomhq/axiom-go/tree/main/adapters/slog
+        description: Handler forwarding logs to Axiom.
       - name: slog-clickhouse
         link: https://github.com/smallnest/slog-clickhouse
         description: Handler forwarding logs to ClickHouse.
