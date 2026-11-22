@@ -87,6 +87,9 @@ categories:
   - name: Log forwarding
     description: Handlers forwarding logs.
     items:
+      - name: logbrew
+        link: https://github.com/LogBrewCo/sdk/tree/main/go/logbrew
+        description: Handler forwarding logs to LogBrew.
       - name: slog-clickhouse
         link: https://github.com/smallnest/slog-clickhouse
         description: Handler forwarding logs to ClickHouse.
